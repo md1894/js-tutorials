@@ -30,7 +30,11 @@ function writeLog(operatorIndentifier, prevResult, userInput) {
  * value to integer data type
  */
 function getUserInput() {
-  return parseInt(userInput.value);
+  let val = parseInt(userInput.value);
+  // isNan function checks that value is NaN or not
+  if(isNaN(val))
+    return 0;
+  return val;
 }
 
 /**
